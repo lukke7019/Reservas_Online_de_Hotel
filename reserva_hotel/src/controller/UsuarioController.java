@@ -1,6 +1,4 @@
 package controller;
-import java.io.UnsupportedEncodingException;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 import model.Usuario;
@@ -10,14 +8,14 @@ public class UsuarioController  {
 	private ArrayList<Usuario> usuarios;
 
 
-public String CriarUsuario( String Email, String Senha) throws NoSuchAlgorithmException, UnsupportedEncodingException{
+	public String CriarUsuario( String Nome, String Email, String Senha) {
 	
-	Usuario usuarioNovo = new Usuario(Email,Senha);
+	Usuario usuarioNovo = new Usuario(Nome, Email,Senha);
 	usuarios.add(usuarioNovo);
 	
 	
 	return "Usuario cadastrado com sucesso";
-}
+	}
 
 	public String getUsuario() {
 		return ("\nEmail" + this.Email
@@ -28,5 +26,7 @@ public String CriarUsuario( String Email, String Senha) throws NoSuchAlgorithmEx
 		if (this.Email == Email && this.Senha == Senha);
 		{
 		
-	}}}
+	}
+		}
+	}
 
